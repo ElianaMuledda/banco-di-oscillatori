@@ -19,4 +19,4 @@ stereo = hgroup("[127] STEREO OUT", *(vol), *(vol) : vmeter, vmeter)
     vol = vslider("[01] VOL", 0,-70,0,+6.1) : ba.db2linear : si.smoo;
 };
   
-process = hgroup("OSCILLATORS BANK", par(i, 1024, oscill(i)) :> stereo);
+process = hgroup("OSCILLATORS BANK", par(i, 12, oscill(i)) :> stereo);
